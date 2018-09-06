@@ -16,10 +16,13 @@ p{
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 18px;
-  line-height: 4rem;
-
 }
 
+a{
+  color:#0f1e5a;
+  line-height: 2rem;
+  text-decoration: none;
+}
 
 h1{
   font-size: 30px;
@@ -34,6 +37,9 @@ h2{
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin:0;
+  color: #4f4f4f;
+  margin-bottom: 10px;
+  margin-top: 20px;
 
 }
 
@@ -48,8 +54,8 @@ hr{
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 30px;
-  padding-bottom: 40px;
-  margin-bottom: 4vh;
+  padding-bottom: 30px;
+  margin-bottom: 3vh;
   transition: all ease 1s;
 
 }

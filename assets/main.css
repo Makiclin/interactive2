@@ -1,0 +1,95 @@
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 50vw;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 4rem;
+
+}
+
+
+h1{
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin:0;
+
+}
+
+h2{
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin:0;
+
+}
+
+hr{
+  border-top: 1px solid #f0f0f0;
+  border-left: 0;
+  margin-bottom: 20px;
+}
+
+.block{
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 4vh;
+  transition: all ease 1s;
+
+}
+
+
+
+.block:hover {
+-webkit-box-shadow: 0px 11px 42px -4px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 11px 42px -4px rgba(0,0,0,0.1);
+box-shadow: 0px 11px 42px -4px rgba(0,0,0,0.1);
+  transition: all ease 0.2s;
+
+
+}
+
+.blocksmall{
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-bottom: 4vh;
+  transition: all ease 1s;
+
+}
+
+.blocksmall:hover {
+  background-color:
+  transition: all ease 0.4s;
+
+
+}
+
+
+.title{
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 6vh;
+  margin-top: 6vh;
+  line-height: 3rem;
+
+
+}

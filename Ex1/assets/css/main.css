@@ -1,0 +1,180 @@
+body {
+	background: #cccccc;
+}
+
+.stage {
+	width: 900px;
+	height: 556px;
+	margin: 100px auto;
+	background: white;
+	position: relative;
+	overflow: hidden;
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	border-bottom: 150px solid yellow;
+	position: absolute;
+	top: 203px;
+	left: 60px;
+}
+
+#square {
+	width: 150px;
+	height: 150px;
+	background: red;
+	top: 203px;
+	left: 270px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+
+}
+
+#circle {
+	width: 150px;
+	height: 150px;
+	background: blue;
+	border-radius: 150px;
+	top: 203px;
+	left: 480px;
+	position: absolute;
+}
+
+#desk {
+	background: #ffd182;
+	clip-path: polygon(80% 53%, 100% 63%, 100% 100%, 34% 100%, 0 69%);
+	top: -45px;
+	left: 70px;
+	width: 830px;
+	height: 601px;
+	position: absolute;
+}
+
+#desk_side {
+	background: #c19e60;
+	clip-path: polygon(0 77%, 0 64%, 56% 100%, 35% 100%);
+	top: 36px;
+	left: 70px;
+	width: 699px;
+	height: 522px;
+	position: absolute;
+}
+
+#orange {
+	background: #ffb10a;
+	clip-path: polygon(50% 0%, 76% 9%, 93% 31%, 94% 72%, 77% 90%, 51% 95%, 26% 89%, 9% 73%, 7% 36%, 23% 14%);
+	top: 336px;
+	    left: 500px;
+	    width: 99px;
+	    height: 102px;
+	position: absolute;
+}
+
+#vaseblack {
+	background: #591105;
+	clip-path: polygon(4% 69%, 13% 72%, 51% 74%, 86% 72%, 98% 70%, 90% 90%, 74% 100%, 55% 100%, 26% 100%, 9% 89%);
+	top: 110px;
+	left: 381px;
+	width: 249px;
+	height: 252px;
+	position: absolute;
+}
+
+#vasered {
+	background: #ff3614;
+	clip-path: polygon(4% 69%, 13% 72%, 51% 74%, 86% 72%, 98% 70%, 98% 26%, 76% 9%, 52% 5%, 25% 11%, 4% 31%);
+	top: 110px;
+	left: 381px;
+	width: 249px;
+	height: 252px;
+	position: absolute;
+}
+
+#bird {
+	background: pink;
+	clip-path: polygon(49% 1%, 52% 13%, 57% 15%, 55% 50%, 59% 59%, 69% 56%, 99% 58%, 68% 66%, 59% 66%, 56% 80%, 51% 73%, 41% 80%, 35% 66%, 1% 56%, 36% 55%, 46% 49%);
+	top: 310px;
+	left: 601px;
+	width: 249px;
+	height: 252px;
+	position: absolute;
+}
+
+
+
+#redpaper {
+	background: #e5391b;
+	clip-path: polygon(0 72%, 49% 63%, 100% 87%, 46% 100%);
+	top: -300px;
+  left: 180px;
+  width: 1089px;
+  height: 942px;
+	position: absolute;
+}
+
+#greenplant {
+	background: #0bbc46;
+	clip-path: polygon(52% 55%, 55% 56%, 52% 100%, 48% 100%);
+	top: -450px;
+	left: 110px;
+	width: 369px;
+	height: 682px;
+	transform: rotate(-40deg);
+	position: absolute;
+}
+
+#pinkshadow {
+	background: #f9a4b3;
+	clip-path: polygon(50% 0%, 41% 97%, 54% 100%);
+	top: 330px;
+    left: 643px;
+    width: 179px;
+    height: 180px;
+	position: absolute;
+}
+
+#clip {
+	width: 150px;
+	height: 150px;
+	background: green;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	top: 203px;
+	left: 690px;
+	position: absolute;
+
+	/* uncomment for css transitions */
+	/* transition: all 400ms ease; */
+}
+
+/* animations */
+
+/*
+#clip:hover {
+	transform: rotate(1200deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+*/

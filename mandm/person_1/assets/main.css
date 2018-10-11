@@ -1,0 +1,255 @@
+/* reset padding and margins */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+	background-image: linear-gradient(black, white);
+}
+
+/* container */
+
+.container {
+	position: relative;
+}
+
+/* items */
+
+.item {
+	height: 250px;
+	width: 250px;
+	background: white;
+	color: black;
+	margin: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	float: left;
+	transition: all 500ms ease;
+
+	cursor: pointer;
+}
+
+.changeWidth{
+	width:100px;
+}
+
+.changeHeight{
+	height:100px;
+}
+
+.hide{
+	opacity: 0.05;
+}
+
+.black{
+ background: black;
+}
+
+
+span{
+	text-align: center;;
+	display: table-cell;
+  vertical-align: middle;
+	display: inline-block;
+}
+
+.launch{
+	margin-top: 300px;
+	transition: all ease 8s;
+}
+
+
+/* example button 1 */
+
+#button-1:hover {
+	transform: rotate(90deg) scale(1.5);
+	opacity: .3;
+}
+
+#button-1:active {
+	background: pink;
+	opacity: 1;
+}
+
+/* example button 2 */
+
+#button-2::after {
+	content: 'this is the real secret';
+	color: white;
+}
+
+
+#button-2:hover::after {
+	content: 'this is a secret';
+	color: black;
+}
+
+/* example button 3 is changed only via js */
+
+/* example button 4 */
+#button-4.gradient-background {
+	background: linear-gradient(blue, pink);
+	color: transparent;
+}
+
+/* example button 5 */
+.circle {
+	border-radius: 125px;
+}
+
+/* example button 6 */
+#button-6:active{
+	transition: none;
+	transform: scale(0.2);
+}
+
+#button-7:hover{
+	box-shadow: 0px 0px 51px 3px rgba(255,242,0,1);
+}
+
+#button-8{
+	transition: none;
+
+}
+
+#button-9:hover{
+	background: black;
+}
+
+#button-10:hover{
+	border-style: dotted;
+	border-width: 20px;
+}
+
+#button-11:hover{
+	filter: blur(15px);
+}
+
+#button-12{
+	font-size: 24px;
+}
+
+#button-12:hover{
+	font-family: serif;
+}
+
+#button-13:hover{
+	/* background: black; */
+}
+
+#button-14:hover{
+	/* background: black; */
+}
+#button-15:hover{
+	/* background: black; */
+}
+
+#button-16 .black{
+	background: black;
+}
+
+#button-17:active{
+
+	width: 10000px;
+	transition: 14s all ease;
+}
+
+#button-18:hover{
+	margin-left: 20px;
+}
+
+#button-18:active{
+	margin-left: 40px;
+	background: red;
+}
+
+#button-19:hover{
+	margin-top: 20px;
+}
+
+#button-20:hover{
+	margin-top: 20px;
+}
+
+#button-22:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+#button-23 {
+}
+
+#button-23:hover {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid white;
+      /* position: absolute; */
+      /* content: ""; */
+      top: 30px;
+      left: -50px;
+}
+
+#button-24:active {
+  animation-fill-mode: both;
+  animation: rotate 0.2s infinite linear;
+  /* border: 70px dotted black; */
+  border-color:transparent black transparent black;
+  /* border-radius:50%; */
+  bottom: 0;
+  /* content: ""; */
+  display: block;
+  /* height: 30px; */
+  /* left: 0; */
+  margin-left: 10px;
+  overflow: hidden;
+  /* position: fixed; */
+  /* right: 0; */
+  /* top: 0; */
+  /* width: 30px; */
+  /* z-index: -1; */
+}
+
+@-webkit-keyframes rotate
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

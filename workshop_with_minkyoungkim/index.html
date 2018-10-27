@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCA Workshop Template</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    html, body, div, p {margin:0; padding:0;}
+    .box {width: 100px; height: 100px; padding: 1em; position:absolute; background-color:white; border:solid 1px;}
+    .box1 {top:20%; left:25%; z-index:10;}
+    .box2 {top:60%; left:60%; z-index:20;}
+    .box3 {top:40%; left:40%; z-index:30;}
+    .box4 {top:60%; left:80%; z-index:40;}
+    .box5 {top:30%; left:60%; z-index:50;}
+
+    .image{
+      /* width: 100px; */
+      /* height: 100px; */
+      position: absolute;
+      /* z-index: 100; */
+    }
+
+    .box{
+      font-size: 20px;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <div class="draggable resizable box box1" id="hover1">
+        <p>Asia</p>
+    </div>
+    <div class="draggable resizable box box2" id="hover2">
+        <p>America</p>
+    </div>
+    <div class="draggable resizable box box3" id="hover3">
+        <p>Oceania</p>
+    </div>
+
+    <div class="draggable resizable box box4" id="hover4">
+        <p>Europe</p>
+    </div>
+    <div class="draggable resizable box box5" id="hover5">
+        <p>Africa</p>
+    </div>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        var imgarrayBox1 = ['box1 (1).PNG','box1 (2).PNG','box1 (3).PNG','box1 (4).PNG','box1 (5).PNG','box1 (6).PNG','box1 (7).PNG','box1 (8).PNG','box1 (9).PNG','box1 (10).PNG'];
+        var imgarrayBox2 = ['box2 (1).PNG','box2 (2).PNG','box2 (3).PNG','box2 (4).PNG','box2 (5).PNG','box2 (6).PNG','box2 (7).PNG','box2 (8).PNG'];
+        var imgarrayBox3 = ['box3 (1).PNG','box3 (2).PNG','box3 (3).PNG','box3 (4).PNG','box3 (5).PNG'];
+        var imgarrayBox4 = ['box4(1).PNG','box4(2).PNG','box4(3).PNG','box4(4).PNG','box4(5).PNG'];
+        var imgarrayBox5 = ['box5(1).PNG','box5(2).PNG','box5(3).PNG','box5(4).PNG','box5(5).PNG'];
+
+
+        var windowWidth = window.width;
+        var windowHeight = window.height;
+
+        var randSize = (Math.random() * 80) + 100;
+
+
+
+      $('#hover1').mouseover(function(){
+        for(i=0; i<1; i++){
+          var randomImg = imgarrayBox1[Math.floor(Math.random()*imgarrayBox1.length)];
+          var randWidth = (Math.random() * 1600) + 1;
+          var randHeight = (Math.random() * 800) + 1;
+
+
+          $("<img src='box1/" + randomImg +"'" +  "class='image'" + "style=left:" + randWidth +"px;" + "top:"+ randHeight +"px;" + "height:" + randSize + "px;width:" + randSize + "px;" + ">" ).appendTo($(document.body));
+        }
+      });
+
+      $('#hover2').mouseover(function(){
+        for(i=0; i<1; i++){
+          var randomImg = imgarrayBox2[Math.floor(Math.random()*imgarrayBox2.length)];
+          var randWidth = (Math.random() * 1600) + 1;
+          var randHeight = (Math.random() * 800) + 1;
+
+          $("<img src='box2/" + randomImg +"'" +  "class='image'" + "style=left:" + randWidth +"px;" + "top:"+ randHeight +"px;" + "height:" + randSize + "px;width:" + randSize + "px;" + ">" ).appendTo($(document.body));
+        }
+      });
+
+
+      $('#hover3').mouseover(function(){
+        for(i=0; i<1; i++){
+          var randomImg = imgarrayBox3[Math.floor(Math.random()*imgarrayBox3.length)];
+          var randWidth = (Math.random() * 1600) + 1;
+          var randHeight = (Math.random() * 800) + 1;
+
+          $("<img src='box3/" + randomImg +"'" +  "class='image'" + "style=left:" + randWidth +"px;" + "top:"+ randHeight +"px;" + "height:" + randSize + "px;width:" + randSize + "px;" + ">" ).appendTo($(document.body));
+        }
+      });
+
+      $('#hover4').mouseover(function(){
+        for(i=0; i<1; i++){
+          var randomImg = imgarrayBox4[Math.floor(Math.random()*imgarrayBox4.length)];
+          var randWidth = (Math.random() * 1600) + 1;
+          var randHeight = (Math.random() * 800) + 1;
+
+          $("<img src='box4/" + randomImg +"'" +  "class='image'" + "style=left:" + randWidth +"px;" + "top:"+ randHeight +"px;" + "height:" + randSize + "px;width:" + randSize + "px;" + ">" ).appendTo($(document.body));
+        }
+      });
+
+      $('#hover5').mouseover(function(){
+        for(i=0; i<1; i++){
+          var randomImg = imgarrayBox5[Math.floor(Math.random()*imgarrayBox5.length)];
+          var randWidth = (Math.random() * 1600) + 1;
+          var randHeight = (Math.random() * 800) + 1;
+
+          $("<img src='box5/" + randomImg +"'" +  "class='image'" + "style=left:" + randWidth +"px;" + "top:"+ randHeight +"px;" + "height:" + randSize + "px;width:" + randSize + "px;" + ">" ).appendTo($(document.body));
+        }
+      });
+
+
+
+
+
+    </script>
+</body>
+</html>

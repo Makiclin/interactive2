@@ -1,0 +1,880 @@
+body {
+    margin: 0;
+    background-color: #1A0000;
+}
+
+:root {
+    --fontHeight: 90px;
+    --fontWidth: 80px;
+    --negativeColor: #1A0000;
+    --baseKern: var(--fontWidth);
+    --stemWidth: 34px;
+    --crossBarGerneralWidth: 40px;
+    --crossBarHeight: 12px;
+    --color: #ffcccc;
+    --distance1: 0px;
+    /*--distance3:60px;*/
+    /*--distance2:30px;*/
+    --distance2: calc(var(--stemWidth) + 0.1 * var(--fontWidth));
+    --distance3: calc(2 * var(--stemWidth) + 0.28 * var(--fontWidth));
+
+    --radius: 16px;
+    --smallRadius: 8px;
+}
+
+
+.fontBox {
+    background: var(--negativeColor);
+    padding: 20px;
+    height: 10vh;
+    width: 92vw;
+    padding-left: 6vw;
+
+}
+
+.logo{
+  height: 20px;
+  width: 140px;
+  background-image: url(logo.png);
+  position: fixed;
+  bottom: 8vh;
+  right: 6vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.firstline{
+  padding-top: 10vh;
+}
+
+.nav{
+  margin-left: 6vw;
+  margin-top: 10vh;
+  width: 300px;
+  position: fixed;
+  bottom: 8vh;
+
+}
+
+.button{
+  height: 20px;
+  width: var(--fontWidth);
+  transform: skew(-15deg, 0deg);
+  background: white;
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+}
+
+.buttonSwitch{
+  opacity: 0.3
+}
+
+
+a {
+    color: red;
+}
+
+.rootLetter {
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: var(--fontWidth);
+    height: var(--fontHeight);
+    /*border: 1px yellow solid;*/
+    margin-right: var(--baseKern);
+    transform: skew(-15deg, 0deg);
+    transition: all ease 0.2s;
+
+}
+
+.rootLetterNoSkew{
+  /*float: left;*/
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: var(--fontWidth);
+  height: var(--fontHeight);
+  /*border: 1px yellow solid;*/
+  margin-right: var(--baseKern);
+  transform: skew(-15deg, 0deg);
+  transition: all ease 0.2s;
+}
+
+.rootLetter:hover{
+  /*float: left;*/
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: var(--fontWidth);
+  height: var(--fontHeight);
+  /*border: 1px yellow solid;*/
+  margin-right: var(--baseKern);
+  transform: skew(0deg, 0deg);
+  transition: all ease 0.2s;
+
+}
+
+.rootLetter::before{
+  /*float: left;*/
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: var(--fontWidth);
+  height: var(--fontHeight);
+  /*border: 1px yellow solid;*/
+  margin-right: var(--baseKern);
+  transform: skew(0deg, 0deg);
+  filter: blur(5px);
+  transition: all ease 0.2s;
+
+}
+
+.stem {
+    background: var(--color);
+    width: var(--stemWidth);
+    height: var(--fontHeight);
+}
+
+.crossBar {
+    background: var(--color);
+    height: var(--crossBarHeight);
+    width: var(--crossBarGerneralWidth);
+}
+
+
+
+
+.letter {
+
+}
+
+.letter * {
+    position: absolute;
+    /*border: 1px solid yellow;*/
+    /*float: left;*/
+}
+
+.partSpeed1 {
+    position: absolute;
+}
+
+.partSpeed2 {
+    position: absolute;
+}
+
+.partSpeed3 {
+    position: absolute;
+}
+
+/* A */
+
+.a .one {
+
+}
+
+.a .two {
+    top: calc(var(--fontHeight) * 0.6);
+
+}
+
+.a .three {
+    border-top-right-radius: var(--radius);
+    margin-left: 10px;
+}
+
+.a .four {
+    width: 20px;
+
+}
+
+/* B */
+
+.b .one {
+}
+
+.b .partSpeed2 {
+    margin-left: 10px;
+}
+
+.b .partSpeed3 {
+    margin-left: 12px;
+}
+
+.b .two {
+    /*margin-left: 10px;*/
+    left: -10px;
+    width: calc(0.8 * var(--crossBarGerneralWidth));
+    border-top-right-radius: var(--radius);
+
+}
+
+.b .three {
+    height: calc(var(--fontHeight) * 0.5);
+    border-top-right-radius: var(--radius);
+
+}
+
+.b .four {
+    top: calc(0.5 * var(--fontHeight) - var(--crossBarHeight));
+    left: -10px;
+    /*width: calc(0.4 * var(--crossBarGerneralWidth));*/
+
+}
+
+.b .five {
+    top: calc(var(--fontHeight) * 0.5);
+    height: calc(var(--fontHeight) * 0.5);
+    border-top-right-radius: var(--radius);
+}
+
+.b .six {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    right: 0;
+
+}
+
+/* C */
+
+.c {
+    /*width: 130px;*/
+}
+
+.c .partSpeed2 {
+    margin-left: 10px;
+}
+
+.c .partSpeed3 {
+    margin-left: 10px;
+}
+
+.c .one {
+    left: 0;
+    top: 0;
+}
+
+.c .two {
+    right: 0;
+
+}
+
+.c .three {
+    height: calc(var(--fontHeight) * 0.3);
+    border-top-right-radius: var(--smallRadius);
+}
+
+.c .four {
+    height: calc(var(--fontHeight) * 0.3);
+    border-top-right-radius: var(--smallRadius);
+    top: calc(var(--fontHeight) - var(--fontHeight) * 0.3);
+
+}
+
+.c .five {
+    right: 0;
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+
+}
+
+/* D */
+
+.d .one {
+    top: 0;
+}
+
+.d .partSpeed2 {
+    /*margin-left: 10px;*/
+}
+
+.d .partSpeed3 {
+    margin-left: 10px;
+}
+
+.d .two {
+    right: 0;
+    width: var(--distance2);
+}
+
+.d .three {
+    border-top-right-radius: var(--radius);
+}
+
+.d .four {
+    /*right: 0;*/
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+/* E */
+
+.e .partSpeed2 {
+    margin-left: -34px;
+}
+
+.e .partSpeed3 {
+    margin-left: 34px;
+}
+
+.e .one {
+    height: calc(0.4 * var(--fontHeight));
+}
+
+.e .two {
+    width: calc(0.4 * var(--fontWidth));
+    border-top-right-radius: var(--smallRadius);
+    left: var(--stemWidth);
+
+}
+
+.e .three {
+    top: calc(0.4 * var(--fontHeight));
+    height: calc(0.6 * var(--fontHeight));
+}
+
+.e .four {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    width: calc(0.4 * var(--fontWidth));
+    left: var(--stemWidth);
+}
+
+.e .five {
+    right: 0;
+    top: calc(0.4 * var(--fontHeight));
+}
+
+/* F */
+
+.f .partSpeed3 {
+    margin-left: 30px;
+}
+
+.f .one {
+
+}
+
+.f .two {
+    width: calc(0.4 * var(--fontWidth));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.f .three {
+    right: 0;
+    top: calc(0.4 * var(--fontHeight));
+}
+
+/* G */
+
+.g .one {
+
+}
+
+.g .partSpeed3 {
+    margin-left: calc(1.5 * var(--stemWidth));
+}
+
+.g .two {
+    width: calc(0.3 * var(--fontWidth));
+    /*border-top-right-radius: var(--smallRadius);*/
+}
+
+.g .three {
+    left: calc(0.4 * var(--stemWidth));
+    height: calc(0.4 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.g .four {
+    right: 0;
+    top: calc(0.6 * var(--fontHeight));
+}
+
+.g .five {
+    right: 0;
+    height: calc(0.4 * var(--fontHeight));
+    top: calc(0.6 * var(--fontHeight));
+}
+
+.g .six {
+    right: 0;
+    width: calc(1.5 * var(--crossBarGerneralWidth));
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+/* H */
+
+.h .one {
+
+}
+
+.h .partSpeed2 {
+    margin-left: calc(0.4 * var(--stemWidth));
+
+}
+
+.h .two {
+
+    border-top-right-radius: var(--smallRadius);
+}
+
+.h .three {
+    top: calc(0.4 * var(--fontHeight));
+}
+
+/* I */
+
+.i .one {
+
+}
+
+.i .two {
+    left: -32px;
+}
+
+.i .three {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    left: -35px;
+}
+
+/* J */
+
+.j .partSpeed3 {
+    margin-left: calc(1.2 * var(--stemWidth));
+
+}
+
+.j .one {
+    top: calc(0.8 * var(--fontHeight));
+    height: calc(0.2 * var(--fontHeight));
+
+}
+
+.j .two {
+    width: calc(0.6 * var(--fontWidth));
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+.j .three {
+    width: calc(0.6 * var(--fontWidth));
+    right: 0;
+    border-top-right-radius: var(--smallRadius);
+}
+
+.j .four {
+    right: 0;
+    border-top-right-radius: var(--smallRadius);
+}
+
+/* K */
+
+.k .one {
+    height: calc(0.6 * var(--fontHeight));
+
+}
+
+.k .two {
+    top: calc(0.6 * var(--fontHeight));
+    height: calc(0.4 * var(--fontHeight));
+    margin-left: -34px;
+}
+
+.k .three {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(0.4 * var(--fontHeight));
+    margin-left: 12px;
+}
+
+.k .four {
+    top: calc(0.4 * var(--fontHeight));
+    width: calc(var(--fontWidth) - var(--stemWidth));
+}
+
+.k .five {
+    width: calc(var(--fontWidth) - var(--stemWidth));
+    top: calc(0.6 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.k .six {
+    margin-left: 12px;
+    top: calc(0.6 * var(--fontHeight));
+    height: calc(0.4 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
+
+/* L */
+
+.l .partSpeed2 {
+    margin-left: -34px;
+}
+
+.l .one {
+    top: calc(0.4 * var(--fontHeight));
+    height: calc(0.6 * var(--fontHeight));
+
+}
+
+.l .two {
+    height: calc(0.4 * var(--fontHeight));
+}
+
+.l .three {
+    border-top-right-radius: var(--smallRadius);
+    top: calc(0.8 * var(--fontHeight));
+    height: calc(0.2 * var(--fontHeight));
+    margin-left: 12px;
+}
+
+.l .four {
+    width: calc(var(--fontWidth) - var(--stemWidth));
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+/* M */
+
+.m .one {
+
+}
+
+.m .two {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.m .three {
+    border-top-right-radius: var(--smallRadius);
+    width: calc(var(--fontWidth) - var(--stemWidth));
+}
+
+.m .four {
+    border-top-right-radius: var(--smallRadius);
+    width: 20px;
+    margin-left: 40px;
+}
+
+/* N */
+
+.n .one {
+
+}
+
+.n .two {
+    top: calc(0.6 * var(--fontHeight));
+    height: calc(0.4 * var(--fontHeight));
+    margin-left: 12px;
+}
+
+.n .three {
+    width: calc(0.5 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.n .four {
+    height: calc(0.6 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+    margin-left: 12px;
+}
+
+/* O */
+
+.o .one {
+    border-top-left-radius: var(--smallRadius);
+    border-bottom-left-radius: var(--smallRadius);
+}
+
+.o .two {
+    width: calc(0.6 * var(--fontWidth));
+    border-top-left-radius: var(--smallRadius);
+}
+
+.o .three {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+
+}
+
+.o .four {
+    border-top-right-radius: var(--smallRadius);
+    border-bottom-right-radius: var(--smallRadius);
+    margin-left: 12px;
+}
+
+/* P */
+
+.p .partSpeed3 {
+    margin-left: 14px;
+}
+
+.p .one {
+
+}
+
+.p .two {
+    width: calc(0.6 * var(--fontWidth));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.p .three {
+    height: calc(0.4 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+
+}
+
+.p .four {
+    width: calc(0.6 * var(--fontWidth));
+    top: calc(0.4 * var(--fontHeight));
+    margin-left: -14px;
+    border-bottom-right-radius: var(--smallRadius);
+}
+
+/* Q */
+
+.q .one {
+
+}
+
+.q .two {
+    width: calc(1.5 * var(--stemWidth));
+}
+
+.q .three {
+    border-top-right-radius: var(--smallRadius);
+    margin-left: 12px;
+}
+
+.q .four {
+    width: calc(0.9 * var(--fontWidth));
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+/* R */
+
+.r .one {
+
+}
+
+.r .two {
+    border-top-right-radius: var(--smallRadius);
+    width: calc(1.4 * var(--stemWidth));
+}
+
+.r .three {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(var(--fontHeight) * 0.4);
+    margin-left: 14px;
+}
+
+.r .four {
+    top: calc(0.4 * var(--fontHeight));
+    width: calc(1.4 * var(--stemWidth));
+}
+
+.r .five {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(var(--fontHeight) * 0.4);
+    top: calc(var(--fontHeight) * 0.6);
+    margin-left: 12px;
+}
+
+/* S */
+
+.s .one {
+    height: calc(0.4 * var(--fontHeight));
+}
+
+.s .two {
+    border-top-right-radius: var(--smallRadius);
+}
+
+.s .three {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    margin-left: -34px;
+    width: calc(0.6 * var(--fontWidth));
+}
+
+.s .four {
+    top: calc(0.4 * var(--fontHeight));
+    margin-left: -34px;
+    width: var(--fontWidth);
+    border-top-right-radius: var(--smallRadius);
+}
+
+.s .five {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(var(--fontHeight) * 0.6);
+    margin-left: 12px;
+    top: calc(var(--fontHeight) * 0.4);
+}
+
+/* T */
+
+.t .one {
+    /*width: calc(0.2 * var(--fontWidth);*/
+
+}
+
+.t .two {
+    margin-left: -14px;
+}
+
+.t .three {
+    border-top-right-radius: var(--smallRadius);
+
+}
+
+/* U */
+
+.u .one {
+    border-top-left-radius: var(--smallRadius);
+}
+
+.u .two {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+.u .three {
+
+    margin-left: 12px;
+
+}
+
+/* V */
+
+.v .one {
+
+}
+
+.v .two {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+}
+
+.v .three {
+    top: calc(0.4 * var(--fontHeight));
+    height: calc(0.6 * var(--fontHeight));
+    margin-left: 12px;
+    border-bottom-right-radius: var(--smallRadius);
+}
+
+.v .four {
+    height: calc(0.4 * var(--fontHeight));
+    margin-left: 12px;
+    border-top-right-radius: var(--smallRadius);
+}
+
+/* W */
+
+.w .one {
+
+}
+
+.w .two {
+    width: 20px;
+    left: calc(0.1 * var(--fontWidth));
+}
+
+.w .three {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    width: calc(0.6 * var(--fontWidth));
+
+}
+
+.w .four {
+    width: 20px;
+    border-top-right-radius: var(--smallRadius);
+    margin-left: 37px;
+
+}
+
+/* X */
+
+.x .one {
+    height: calc(0.5 * var(--fontHeight));
+
+}
+
+.x .two {
+    top: calc(0.45 * var(--fontHeight));
+    width: calc(0.6 * var(--fontWidth));
+    border-bottom-left-radius: var(--smallRadius);
+
+}
+
+.x .three {
+    top: calc(0.7 * var(--fontHeight));
+    /*width: 20px;*/
+    height: calc(0.3 * var(--fontHeight));
+    border-top-left-radius: var(--smallRadius);
+}
+
+.x .four {
+    /*width: 20px;*/
+    height: calc(0.35 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+    border-bottom-right-radius: var(--smallRadius);
+    margin-left: 12px;
+}
+
+.x .five {
+    top: calc(0.45 * var(--fontHeight));
+    height: calc(0.55 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+    margin-left: 13px;
+
+}
+
+/* Y */
+
+.y .one {
+    height: calc(0.53 * var(--fontHeight));
+    border-bottom-left-radius: var(--smallRadius);
+}
+
+.y .two {
+    top: calc(0.4 * var(--fontHeight));
+}
+
+.y .three {
+    border-top-right-radius: var(--smallRadius);
+    margin-left: 12px;
+
+}
+
+/* Z */
+
+.z .one {
+}
+
+.z .two {
+    top: calc(0.6 * var(--fontHeight));
+    height: calc(0.4 * var(--fontHeight));
+}
+
+.z .three {
+    border-top-right-radius: var(--smallRadius);
+    margin-left: -15px;
+}
+
+.z .four {
+    top: calc(0.5 * var(--fontHeight));
+    right: 0;
+}
+
+.z .five {
+    top: calc(var(--fontHeight) - var(--crossBarHeight));
+    margin-left: 9px;
+}
+
+
+
+
+/* hover area */
+
+/* set this to fixed so this will scroll with you */
+
+#hoverArea {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: hsl(2, 80%, 5%);
+    transition: all 1s ease;
+}

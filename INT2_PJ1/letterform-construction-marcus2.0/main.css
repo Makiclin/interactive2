@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    background-color: #1A0000;
+}
+
+:root {
+    --fontHeight: 90px;
+    --fontWidth: 80px;
+    --negativeColor: #1A0000;
+    --baseKern: var(--fontWidth);
+    --stemWidth: 34px;
+    --crossBarGerneralWidth: 40px;
+    --crossBarHeight: 12px;
+    --color: white;
+    --distance1: 0px;
+    /*--distance3:60px;*/
+    /*--distance2:30px;*/
+    --distance2: calc(var(--stemWidth) + 0.1 * var(--fontWidth));
+    --distance3: calc(2 * var(--stemWidth) + 0.28 * var(--fontWidth));
+    --randomAnimationTime: randomNumber(20,1000);
+
+    --radius: 16px;
+    --smallRadius: 8px;
+}
+
+.sectionTwo{
+  padding-top: 30vh;
+  padding-bottom: 50vh;
+  padding-left: 3vw;
+
+}
+
+.fontBoxTwo {
+    background: var(--negativeColor);
+    padding: 50px;
+    height: 50vh;
+    width: 22000px;
+
+}
+
+
+
+
+a {
+    color: red;
+}
+
+.rootLetter {
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: var(--fontWidth);
+    height: var(--fontHeight);
+    /*border: 1px yellow solid;*/
+    margin-right: var(--baseKern);
+    transform: skew(-15deg, 0deg);
+    transition: all ease 0.2s;
+    /* transition: all ease var(--randomAnimationTime); */
+
+
+}
+
+.rootLetterNoSkew{
+  /*float: left;*/
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: var(--fontWidth);
+  height: var(--fontHeight);
+  /*border: 1px yellow solid;*/
+  margin-right: var(--baseKern);
+  transform: skew(-15deg, 0deg);
+  transition: all ease 0.2s;
+
+}
+
+.rootLetter:hover{
+  /*float: left;*/
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: var(--fontWidth);
+  height: var(--fontHeight);
+  /*border: 1px yellow solid;*/
+  margin-right: var(--baseKern);
+  transform: skew(0deg, 0deg);
+  transition: all ease 0.2s;
+
+}
+
+.stemL {
+    background: var(--color);
+    width: calc(1.6*var(--stemWidth));
+    height: calc(1.6*var(--fontHeight));
+    box-shadow: -20px 0 30px 5px rgba(255,255,255,0.0);
+
+
+}
+
+.crossBarL {
+    background: var(--color);
+    height: calc(1.6* var(--crossBarHeight));
+    width: calc(1.6* var(--crossBarGerneralWidth));
+}
+
+.motionBlur{
+  box-shadow: -20px 0 30px 5px rgba(255,255,255,0.2);
+  transition: all ease 1s;
+}
+
+
+
+.letter {
+
+}
+
+.letter * {
+    position: absolute;
+    /*border: 1px solid yellow;*/
+    /*float: left;*/
+}
+
+.partSpeed1 {
+    position: absolute;
+}
+
+.partSpeed2 {
+    position: absolute;
+}
+
+.partSpeed3 {
+    position: absolute;
+}
+
+/* hover area */
+
+/* set this to fixed so this will scroll with you */
+
+#hoverArea {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: hsl(2, 80%, 5%);
+    transition: all 1s ease;
+}
+
+.sectionOne{
+  padding-top: 30vh;
+  padding-bottom: 50vh;
+  padding-left: 4vw;
+
+}
+
+
+.fontBoxOne {
+    background: var(--negativeColor);
+    padding: 50px;
+    width: 20000px;
+    height: 8vh;
+
+}
+
+
+
+
+
+/* B large*/
+
+.bl .one {
+}
+
+.bl .partSpeed2 {
+    margin-left: 22px;
+}
+
+.bl .partSpeed3 {
+    margin-left: 30px;
+}
+
+.bl .two {
+    /*margin-left: 10px;*/
+    left: -10px;
+    width: calc(0.8 * var(--crossBarGerneralWidth));
+    border-top-right-radius: var(--radius);
+
+}
+
+.bl .three {
+    height: calc(var(--fontHeight) * 0.5 *1.6);
+    border-top-right-radius: var(--radius);
+
+}
+
+.bl .four {
+    top: calc(0.5 *1.6 * var(--fontHeight) - var(--crossBarHeight));
+    left: -10px;
+    /*width: calc(0.4 * var(--crossBarGerneralWidth));*/
+
+}
+
+.bl .five {
+    top: calc(var(--fontHeight) * 0.5 *1.6);
+    height: calc(var(--fontHeight) * 0.5 *1.6);
+    border-top-right-radius: var(--radius);
+}
+
+.bl .six {
+    top: calc((var(--fontHeight) - var(--crossBarHeight))*1.6);
+    right: 0;
+
+}
+
+/* R large */
+
+.rl .one {
+
+}
+
+.rl .two {
+    border-top-right-radius: var(--smallRadius);
+    width: calc(1.6 * 1.4 * var(--stemWidth));
+}
+
+.rl .three {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(var(--fontHeight) * 0.4 * 1.6);
+    margin-left: 22px;
+}
+
+.rl .four {
+    top: calc(1.6 * 0.4 * var(--fontHeight));
+    width: calc(1.6 * 1.4 * var(--stemWidth));
+}
+
+.rl .five {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(var(--fontHeight) * 0.4 *1.6);
+    top: calc(var(--fontHeight) * 0.6 *1.6);
+    margin-left: 32px;
+}
+
+/* E large */
+
+.el .partSpeed2 {
+    margin-left: -34px;
+}
+
+.el .partSpeed3 {
+    margin-left: 34px;
+}
+
+.el .one {
+    height: calc(1.6 * 0.4 * var(--fontHeight));
+}
+
+.el .two {
+    width: calc(1.6 * 0.4 * var(--fontWidth));
+    border-top-right-radius: var(--smallRadius);
+    left: calc(1.6 * var(--stemWidth));
+
+}
+
+.el .three {
+    top: calc(1.6 * 0.4 * var(--fontHeight));
+    height: calc(1.6 * 0.6 * var(--fontHeight));
+}
+
+.el .four {
+    top: calc(1.6 * (var(--fontHeight) - var(--crossBarHeight)));
+    width: calc(1.6 * 0.4 * var(--fontWidth));
+    left: calc(1.6 * var(--stemWidth));
+}
+
+.el .five {
+    right: 0;
+    top: calc(1.6 * 0.4 * var(--fontHeight));
+}
+
+
+/* A large */
+
+.al .one {
+
+}
+
+.al .two {
+    top: calc(var(--fontHeight) * 0.6 * 1.6);
+
+}
+
+.al .three {
+    border-top-right-radius: var(--radius);
+    margin-left: 23px;
+}
+
+.al .four {
+    width: 40px;
+
+}
+
+/*  K large */
+
+.kl .one {
+    height: calc(1.6 * 0.6 * var(--fontHeight));
+
+}
+
+.kl .two {
+    top: calc(1.6 * 0.6 * var(--fontHeight));
+    height: calc(1.6 * 0.4 * var(--fontHeight));
+    margin-left: -34px;
+}
+
+.kl .three {
+    border-top-right-radius: var(--smallRadius);
+    height: calc(1.6 * 0.4 * var(--fontHeight));
+    margin-left: 23px;
+}
+
+.kl .four {
+    top: calc(1.6 * 0.4 * var(--fontHeight));
+    width: calc(1.66 * (var(--fontWidth) - var(--stemWidth)));
+}
+
+.kl .five {
+    width: calc(var(--fontWidth) - var(--stemWidth));
+    top: calc(1.6 * 0.6 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
+
+.kl .six {
+    margin-left: 34px;
+    top: calc(1.6 * 0.6 * var(--fontHeight));
+    height: calc(0.4 * 1.6 * var(--fontHeight));
+    border-top-right-radius: var(--smallRadius);
+}
